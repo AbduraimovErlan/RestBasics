@@ -1,11 +1,10 @@
 from django.urls import path, include
 # from api_basic.views import article_list, article_detail
-from api_basic.views import ArticleAPIView, ArticleDetail
+from api_basic.views import GenericAPIView
 
 
 urlpatterns = [
-    path('article/', ArticleAPIView.as_view()),
-    path('detail/<int:id>/', ArticleDetail.as_view())
+    path('generic/detail/<int:id>/', GenericAPIView.as_view()),
 ]
 
 
