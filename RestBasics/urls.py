@@ -1,12 +1,13 @@
 from django.urls import path, include
 # from api_basic.views import article_list, article_detail
-from api_basic.views import GenericAPIView
+from api_basic.views import ArticleViewSet
+from rest_framework.routers import DefaultRouter
+
 
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-
-    path('generic/detail/<int:id>/', GenericAPIView.as_view()),
+    path('', include('api_basic.urls'))
+    # path('generic/detail/<int:id>/', GenericAPIView.as_view()),
 ]
 
 
