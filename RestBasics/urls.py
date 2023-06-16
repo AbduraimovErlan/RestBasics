@@ -4,6 +4,8 @@ from api_basic.views import GenericAPIView
 
 
 urlpatterns = [
+    # path('admin/', admin.site.urls),
+
     path('generic/detail/<int:id>/', GenericAPIView.as_view()),
 ]
 
